@@ -3,7 +3,7 @@ One of the challenges in leveraging Azure's Custom Vision containers for product
 
 After going through a large number of dockerfile iterations, I found a 'recipe' which increases performance dramatically on Nvidia GPU-based devices while still preserving the convenience of the Azure Custom Vision export. This repository builds off of the samples available at https://github.com/microsoft/onnxruntime.
 
-Testing raw .jpg images over HTTP with this build on a single Tesla T4 running Ubunutu 18.04 using a Flask app has been yielding results in the ~40ms range. Faster round-trip inference times could likely be achieved through utilizing gRCP endpoints in lieu of HTTP, which is a planned enhancement to the example.
+Testing raw .jpg images over HTTP with this build on a single Nvidia Tesla T4 running Ubunutu 18.04 using a Flask app has been yielding results in the ~40ms range. Faster round-trip inference times could likely be achieved through utilizing gRCP endpoints in lieu of HTTP, which is a planned enhancement to the example.
 
 To get started, go to https://azure.microsoft.com/en-us/services/cognitive-services/custom-vision-service/ and train your object detection model using Azure Custom Vision.  Export the trained model as an ONNX model (FP16 or FP32), and replace the model.onnx placeholder file in the folder above, as well as the labels.txt file.
 
