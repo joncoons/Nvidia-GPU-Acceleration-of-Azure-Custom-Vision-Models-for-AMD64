@@ -5,7 +5,7 @@ After going through a large number of dockerfile iterations, I found a 'recipe' 
 
 Testing raw .jpg images over HTTP with this build on a single Tesla T4 running Ubunutu 18.04 using a Flask app has been yielding results in the ~40ms range.
 
-To get started, go to https://azure.microsoft.com/en-us/services/cognitive-services/custom-vision-service/ and train your object detection model using Azure Custom Vision.  Export the trained model as an ONNX model (FP16 or FP32), and replace the ONNX placeholder file in the folder above, as well as the labels.txt file.
+To get started, go to https://azure.microsoft.com/en-us/services/cognitive-services/custom-vision-service/ and train your object detection model using Azure Custom Vision.  Export the trained model as an ONNX model (FP16 or FP32), and replace the model.onnx placeholder file in the folder above, as well as the labels.txt file.
 
 If you're looking for a different ONNX runtime environment, please visit https://github.com/microsoft/onnxruntime/blob/master/dockerfiles/README.md to review the support matrix and docker pull tags.
 
